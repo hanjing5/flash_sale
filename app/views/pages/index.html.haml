@@ -1,0 +1,10 @@
+= render 'custom_css'
+.hero-unit
+  %h2 Exclusive membership discount. Up to 80% Off on designer dresses.
+  %br
+  =form_for 'subscriber', :url=> sub_index_path, :method => 'post', :remote => true do |f|
+    #response{:style=>'display:none;width:40.5em'}
+    #sub_form      
+      =f.text_field :email, :style=>'font-size:2em;height:1.5em;width:10em'
+      %button{:class=>'btn btn-warning btn-large',:id=>'subscribe_button',:style=>'font-size:1.5em;height:2.4em'} Request Invite
+  

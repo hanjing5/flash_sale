@@ -1,0 +1,39 @@
+<%= form_for @cur_site_info, @cur_site_info, :html => { :multipart => true,:method=>"put" } do |form| %>
+<table>
+<tr>
+	<td>
+	Name Site Name
+	</td>
+<td>
+<%= form.text_field :name, :placeholder=>"#{@cur_site_info.name}"%>
+</td>
+</tr>
+<tr>
+	<td>
+	Nick Name
+	</td>
+<td>
+<%= form.text_field :nick_name, :placeholder=>"#{@cur_site_info.nick_name}"%>
+</td>
+</tr>
+<tr>
+	<td>
+	Meta Data
+	</td>
+	<td>
+<%= form.text_area :meta_data, :placeholder=>"#{@cur_site_info.meta_data}",:style=>'height:5em'%>
+	</td>
+</tr>
+<tr>
+	<td>
+	Background Image Link
+	</td>
+	<td>
+		<%= form.text_field :bg_img_link, :placeholder=>"#{@cur_site_info.bg_img_link}"%>
+	</td>
+</tr>
+</table>
+<button type="submit" class="btn btn-large btn-primary">Update</button>
+<% end %>
+
+
