@@ -2,4 +2,7 @@
 %br
 %h2 We will send you an invite as soon as spaces open up!
 %br
-%h2 In the mean time, you can earn purchase credits by referring friends.
+%h2 
+  In the mean time, you can earn 
+  = link_to 'purchase credits', "#{root_url}?referer=#{@subscriber.email}"
+  by referring friends.

@@ -4,6 +4,9 @@ class PagesController < ApplicationController
   end
 
 	def index
+    if not params[:referer].nil?
+      @referer = params[:referer]
+    end
 		@title = 'Home'
 	end
 

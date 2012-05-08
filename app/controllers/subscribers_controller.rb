@@ -2,8 +2,20 @@ class SubscribersController < ApplicationController
 	
 	
   def create
-    @subscriber = Subscriber.new(params[:subscriber])
+    @subscriber = ''
     @success = false
+
+    if not params[:subscriber][:referer].nil?
+      puts 'Found a referer'
+      r = Subscriber.find_by_email(params[:subscriber][:referer])
+      if r
+        @subscriber = r.subscribers.new(params[:subscriber])
+        #params[:subscriber][:subscriber_id] = r.id
+        #params[:subscriber][:subscriber_id]
+      else 
+        @subscriber = Subscriber.new(params[:subscriber])
+      end
+    end
 
     if @subscriber.save
 			#SubMailer.welcome_email(@subscriber).deliver

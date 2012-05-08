@@ -1,4 +1,5 @@
     <%= form_for "subscriber", :url => sub_index_path, :method=>'post',:remote=>true do |f| %>                                      
+      <%= f.hidden_field :referer,:value=>@referer%>
       <div id='response' style="display:none;">
       </div>
 		<div id="sub_form">
@@ -8,7 +9,7 @@
       <button id='subscribe_button' 
             class="btn btn-warning btn-large" 
             style='opacity:1.0;height:2.1em;font-size:2em;vertical-align:top;' 
-            onclick="$(this).button('loading')" data-loading-text='saving...'>
+            data-loading-text='saving...'>
             Request Invite
       </button>
 	</div>

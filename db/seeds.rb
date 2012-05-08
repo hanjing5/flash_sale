@@ -8,7 +8,6 @@
 
 Admin.delete_all
 Admin.create(:email=>'hanqijing@gmail.com', :password=>'123456')
-Admin.create(:email=>'hanqijing@gmail.com', :password=>'123456')
 
 SiteInfo.delete_all
 SiteInfo.create(:nick_name=>'Chloe Addison',:name=>'Chloe Addison',:meta_data=>'Chloe Addison')
