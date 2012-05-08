@@ -13,14 +13,14 @@ class SubMailer < ActionMailer::Base
 		@admins = [
 								'hanqijing@gmail.com'
 							]
-		@admins = Admin.all
+		#@admins = Admin.all
 
 		@site_info = SiteInfo.first
 
 		@url = @site_info.nick_name
 
 		@admins.each do |admin|
-    	mail(:to => admin.email, :subject => "A new subscriber has joined #{@url}")
+    	mail(:to => admin, :subject => "A new subscriber has joined #{@url}")
 		end
   end
 end
