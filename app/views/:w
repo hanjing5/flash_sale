@@ -1,0 +1,27 @@
+.modal{:id=>'myModal', :style=>'display:none'}
+  .modal-header
+    %button{:class=>'close', 'data-dismiss' => 'modal'} ×
+    %h3 Invite Your Friends and Earn Purchase Credits!
+  .modal-body
+    %p Share this link and earn.
+    %br 
+      = link_to "#{root_url}?refer=#{@subscriber.email}", "#{root_url}?refer=#{@subscriber.email}" 
+    %table{:style=>'width:100%'}
+      %tr
+        %td Share on Twitter
+        %td Share on Facebook
+    %table{:style=>'width:100%'}
+      %th
+        %td Founding Member
+        %td Prime Time Player
+      %tr
+        %td $30 crdit
+        %td 50 friends have joined. Free standard shipping for 2 month
+      %th
+        %td VIP Members
+        %td Bonus
+      %tr
+        %td 
+        %td
+  .modal-footer
+
