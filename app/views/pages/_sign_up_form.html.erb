@@ -1,15 +1,18 @@
     <%= form_for "subscriber", :url => sub_index_path, :method=>'post',:remote=>true do |f| %>                                      
-      <div id='response' style="display:none;width:40.5em">
+      <div id='response' style="display:none;">
       </div>
 		<div id="sub_form">
-      <%= f.text_field :email, :placeholder=>'vip@example.com', :style=>'font-size:2em;height:2em;width:10em' %> 
-      <button id='subscribe_button' class="btn btn-warning btn-large" 
-					style='opacity:1.0;height:2.4em;font-size:2em;vertical-align:top;' 
-          onclick="$(this).button('loading')" data-loading-text='saving...'>
+      <%= f.text_field :email, 
+              :placeholder=>'vip@example.com', 
+              :style=>'font-size:2em;height:2em;width:10em' %> 
+      <button id='subscribe_button' 
+            class="btn btn-warning btn-large" 
+            style='opacity:1.0;height:2.1em;font-size:2em;vertical-align:top;' 
+            onclick="$(this).button('loading')" data-loading-text='saving...'>
             Request Invite
       </button>
 	</div>
     <% end %>
   </p>
-	Only jerks spam you and jerks we are not.
+  We will never sell your information. Ever.
 </div>
