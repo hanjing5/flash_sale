@@ -3,7 +3,6 @@ $('.alert').remove();
 //$('#response').append("<% if @success %><script>$('#sub_form').hide();</script><div class='alert alert-success'><p><%= @msg %></p></div><% else %><div class='alert alert-error'><%= escape_javascript(render 'shared/error_messages',:object=>@subscriber) %></div><script>$('#subscribe_button').button('reset')</script><% end %>");
 //$('#response').show();
 
-
 //$('#response').slideDown(500);
 
 function switch_hero () {
@@ -12,4 +11,12 @@ function switch_hero () {
   $('.hero-unit').fadeIn(500);
 }
 
+<% if @success %>
 switch_hero();
+<% else %>
+$('#response').hide();
+$('#response').append("<div class='alert alert-error'><%= escape_javascript(render 'shared/error_messages',:object=>@subscriber) %></div>");
+//$('#subscribe_button').button('reset');
+$('#response').fadeIn(500);
+
+<% end %>
