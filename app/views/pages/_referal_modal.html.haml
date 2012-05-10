@@ -8,14 +8,15 @@
     %br
     #referal-link
       = link_to "#{root_url}?refer=#{@subscriber.email}", "#{root_url}?refer=#{@subscriber.email}" 
+    %br
     %table{:style=>'width:100%',:class=>'table'}
       %tr
         %td{:style=>'width:50%'}  
           // note you have to escape or delete '%' signs for twitter's comment field
-          %a{:href=>"#", :onclick=>'javascript:window.open("http://twitter.com/home?status=80+percent+off+on+fashion.com","share","width=500,height=300,scrollbars=yes");', :title=>"Click to share this post on Twitter"}
+          %a{:href=>"#", :onclick=>"#{twitter_str(@subscriber.email)}", :title=>"Click to share this post on Twitter"}
             = image_tag('shareontwitter.png',:style=>'width:50%;height:52%')
         %td
-          %a{:href=>'#', :title=>'Share on Facebook', :onclick=>'javascript:window.open("http://www.facebook.com/dialog/feed?app_id=136994213093359&name=website name&caption=Get up to 80% discounts on select items on .com.&redirect_uri=http://chloeaddison.herokuapp.com&display=popup&message=Buy%20game%20on%20link%21&link=websitelink","Share","width=500,height=300,scrollbars=yes");'}
+          %a{:href=>'#', :title=>'Share on Facebook', :onclick=>"#{facebook_str(@subscriber.email)}"}
             = image_tag 'shareonfb.png',:style=>'width:50%;height:52%'
     %table{:style=>'width:100%'}
       %tr
