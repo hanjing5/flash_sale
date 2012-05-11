@@ -1,6 +1,5 @@
 class SubscribersController < ApplicationController
 	
-	
   def create
     @subscriber = ''
     @success = false
@@ -39,6 +38,27 @@ class SubscribersController < ApplicationController
       end 
     end 
   end 
+
+  def save_pref
+    @success = false
+    s = Subscriber.find_by_email(params[:subscriber][:email])
+    if s.update_attributes!(params[:subscriber])  
+      @success = true
+    end
+
+    respond_to do |format|
+      format.js
+      format.html {redirect_to success_final_path}
+    end 
+  end
+
+  def success_final
+
+  end
+
+  def success
+
+  end
 
 end
 

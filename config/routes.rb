@@ -5,11 +5,15 @@ AmericanLit400::Application.routes.draw do
 	resources :site_infos
 	resources :custom_urls
 
+  match '/sub_save_pref', :to=>'subscribers#save_pref'
 	match '/manage_urls', :to=>'admins#manage_urls', :as => :manage_urls
 	match '/manage_subs', :to=>'admins#manage_subs',:as => :manage_subs
 	match '/manage_site_infos', :to=>'site_infos#index',:as => :manage_site_infos
 	match '/admin', :to=>'admins#manage_subs'
 	match '/dashboard', :to=>'admins#manage_subs'
+  match '/success', :to=>'pages#success'
+
+  match '/success_final', :to=>'subscribers#success_final'
 
 	match '/:custom_url', :to=>'pages#redirections',:via=>'get'
 

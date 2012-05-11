@@ -1,0 +1,19 @@
+%h2 Check some categories for a more relevant experience
+%br
+%br
+= form_for :subscriber, :url => sub_save_pref_path,:remote=>true  do |f|
+  = f.hidden_field :email, :value=>@subscriber.email
+  %h2
+    = f.check_box :watches
+    watches
+  %h2
+    = f.check_box :ties
+    ties
+  %h2
+    = f.check_box :dress_shirts
+    dress shirts 
+  %h2
+    = f.check_box :shoes
+    shoes
+  %br
+  = f.submit 'save', :class=>'btn btn-large btn-warning'

@@ -1,0 +1,5 @@
+<% if @success %>
+$('#right-hero').fadeIn(500);
+$('#right-hero').html('<%= escape_javascript(render 'pages/pref_saved') %>');
+<% else %>
+<% end %>

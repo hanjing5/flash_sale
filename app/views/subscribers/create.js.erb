@@ -9,6 +9,8 @@ function switch_hero () {
   $('.hero-unit').hide();
   $('.hero-unit').html('<%= escape_javascript(render 'pages/success_message') %>');
   $('.hero-unit').fadeIn(500);
+  $('#right-hero').fadeIn(500);
+  $('#right-hero').html('<%= escape_javascript(render 'pages/pref') %>');
 }
 
 <% if @success %>

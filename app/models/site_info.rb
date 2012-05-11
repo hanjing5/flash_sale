@@ -2,6 +2,7 @@ class SiteInfo < ActiveRecord::Base
 	attr_accessible :meta_data, :nick_name, :name, :bg_img_link
 end
 
+
 # == Schema Information
 #
 # Table name: site_infos
@@ -13,5 +14,6 @@ end
 #  nick_name    :string(255)
 #  created_at   :datetime
 #  updated_at   :datetime
+#  bg_img_link  :string(255)
 #
 

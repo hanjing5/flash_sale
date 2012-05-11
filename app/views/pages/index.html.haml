@@ -1,12 +1,16 @@
 = render 'custom_css'
-.hero-unit
-  %h2 Step up your swag.
-  %h2 Bossary is a members-only access to great men's products and experiences to enhance your lifestyle.
-  %br
-  #response
-  = render 'sign_up_form'
-//  =form_for 'subscriber', :url=> sub_index_path, :method => 'post', :remote => true do |f|
-//    #response{:style=>'display:none;'}
-//    #sub_form      
-//      =f.text_field :email, :style=>'font-size:2em;height:1.5em;width:10em'
-//      %button{:class=>'btn btn-warning btn-large',:id=>'subscribe_button',:style=>'font-size:1.5em;height:2.4em'} Request Invite
+.row-responsive
+  .span6
+    .hero-unit
+      %h2 Step up your swag.
+      %h2 Bossary is a members-only access to great men's products and experiences to enhance your lifestyle.
+      %br
+      #response
+      = render 'sign_up_form'
+    //  =form_for 'subscriber', :url=> sub_index_path, :method => 'post', :remote => true do |f|
+    //    #response{:style=>'display:none;'}
+    //    #sub_form      
+    //      =f.text_field :email, :style=>'font-size:2em;height:1.5em;width:10em'
+    //      %button{:class=>'btn btn-warning btn-large',:id=>'subscribe_button',:style=>'font-size:1.5em;height:2.4em'} Request Invite
+  .span6{:id=>'page-right',:style=>'float:right;right:0;'}
+    .hero-unit{:style=>'display:none;',:id=>'right-hero'} 
