@@ -1,3 +1,4 @@
+
 %h2
   You have 
   = @subscribers.count 
@@ -19,25 +20,40 @@
   List
 
 %hr
-%table{:style=>'width:100%'}
-  %th
-    %b
-      %td
-        Email
-      %td
-        shoes
-      %td
-        watches
-      %td
-        casual
-      %td
-        formal_ties
-      %td
-        denim
-      %td
-        sunglasses
-      %td
-        Join date
+%table{:style=>'width:100%',:class=>'table-condensed'}
+  %tr
+    %td
+      Email
+    %td
+      shoes
+    %td
+      watches
+    %td
+      casual
+    %td
+      formal_ties
+    %td
+      denim
+    %td
+      sunglasses
+    %td
+      join date
+  %tr
+    %td
+      total
+    %td
+      =@shoes_total
+    %td
+      =@watches_total
+    %td
+      =@casual_total
+    %td
+      =@formal_ties_total
+    %td
+      =@denim_total
+    %td
+      =@sunglasses_total
+    %td
   - @subscribers.each do |sub|
     %tr
       %td

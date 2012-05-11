@@ -1,5 +1,5 @@
 class Subscriber < ActiveRecord::Base
-	attr_accessible :email, :type,:watches,:ties,:dress_shirts,:shoes
+	attr_accessible :email, :type,:watches,:casual,:formal_ties,:denim,:sunglasses, :shoes
   has_many :subscribers
 
 	validates_uniqueness_of :email
