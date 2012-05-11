@@ -54,10 +54,12 @@ ActiveRecord::Schema.define(:version => 20120510214715) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "subscriber_id"
-    t.boolean  "watches"
-    t.boolean  "ties"
-    t.boolean  "dress_shirts"
     t.boolean  "shoes"
+    t.boolean  "watches"
+    t.boolean  "casual"
+    t.boolean  "formal_ties"
+    t.boolean  "denim"
+    t.boolean  "sunglasses"
   end
 
 end

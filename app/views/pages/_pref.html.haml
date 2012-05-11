@@ -4,17 +4,23 @@
 = form_for :subscriber, :url => sub_save_pref_path,:remote=>true  do |f|
   = f.hidden_field :email, :value=>@subscriber.email
   %h2
-    = f.check_box :watches
-    watches
-  %h2
-    = f.check_box :ties
-    ties
-  %h2
-    = f.check_box :dress_shirts
-    dress shirts 
-  %h2
     = f.check_box :shoes
-    shoes
+    Shoes
+  %h2
+    = f.check_box :watches
+    Watches
+  %h2
+    = f.check_box :casual
+    Casual Wear
+  %h2
+    = f.check_box :formal_ties
+    Formal Wear / Ties
+  %h2
+    = f.check_box :denim
+    Denim
+  %h2
+    = f.check_box :sunglasses
+    Summer wear / Sunglasses
   %br
   %button{:id=>'subscribe_button', :class=>"btn btn-warning btn-large", :style=>'opacity:1.0;height:2.1em;font-size:2em;vertical-align:top;', :onclick=>"$().button('loading')"}
     save
