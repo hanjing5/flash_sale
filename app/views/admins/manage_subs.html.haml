@@ -1,75 +1,81 @@
-
 %h2
   You have 
   = @subscribers.count 
-  subscribers.
+  subscribers. The top 3 wanted categories are:
+  - @top3.each do |k, v|
+    = "#{k} (#{v}) "
 
 %h1
-  For copy and paste export
-
+  Copy & paste email export
+  %button{:style=>'btn btn-primary',:onclick=>'$(".all_subs").show();'}
+    show
 %hr
-
-- @subscribers.each do |sub|
-  = "#{sub.email},"
-
-%br
-%br
-%br
+.all_subs{:style=>'display:none'}
+  - @subscribers.each do |sub|
+    = "#{sub.email},"
+  %br
+  %br
+  %br
 
 %h1
-  List
-
+  Full List
 %hr
 %table{:style=>'width:100%',:class=>'table-condensed'}
+  %tr{:class=>"subnav subnav-fixed"}
+    %td
+      %b Email
+    %td
+      %b Shoes
+    %td
+      %b Watches
+    %td
+      %b Casual Wear
+    %td
+      %b Formal Wear / Ties
+    %td
+      %b Denim
+    %td
+      %b Summer Wear / Sunglasses
+    %td
+      %b join date
   %tr
     %td
-      Email
+      %b total
     %td
-      shoes
+      =@shoes_total.count
     %td
-      watches
+      =@watches_total.count
     %td
-      casual
+      =@casual_total.count
     %td
-      formal_ties
+      =@formal_ties_total.count
     %td
-      denim
+      =@denim_total.count
     %td
-      sunglasses
-    %td
-      join date
-  %tr
-    %td
-      total
-    %td
-      =@shoes_total
-    %td
-      =@watches_total
-    %td
-      =@casual_total
-    %td
-      =@formal_ties_total
-    %td
-      =@denim_total
-    %td
-      =@sunglasses_total
+      =@sunglasses_total.count
     %td
   - @subscribers.each do |sub|
     %tr
       %td
         = sub.email
       %td
-        = sub.shoes
+        -if sub.shoes
+          Shoes
       %td
-        =sub.watches
+        - if sub.watches
+          Watches
       %td
-        =sub.casual
+        - if sub.casual
+          Casual Wear
       %td
-        =sub.formal_ties
+        - if sub.formal_ties
+          Formal Wear / Ties
       %td
-        =sub.denim
+        - if sub.denim
+          Denim
       %td
-        =sub.sunglasses
+        - if sub.sunglasses
+          Summer Wear / Sunglasses
       %td
         =sub.created_at
 
