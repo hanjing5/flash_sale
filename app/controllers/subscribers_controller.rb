@@ -26,8 +26,7 @@ class SubscribersController < ApplicationController
       flash['msg'] = @msg
       respond_to do |format|
         format.js
-        format.html {redirect_to root_path}
-				return
+        format.html {redirect_to success_path(:sub=>@subscriber.email)}
       end 
     else
       @msg = 'Failed!'
@@ -48,16 +47,8 @@ class SubscribersController < ApplicationController
 
     respond_to do |format|
       format.js
-      format.html {redirect_to success_final_path}
+      format.html {redirect_to success_final_path(:sub=>s.email)}
     end 
-  end
-
-  def success_final
-
-  end
-
-  def success
-
   end
 
 end

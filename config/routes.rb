@@ -13,7 +13,7 @@ AmericanLit400::Application.routes.draw do
 	match '/dashboard', :to=>'admins#manage_subs'
   match '/success', :to=>'pages#success'
 
-  match '/success_final', :to=>'subscribers#success_final'
+  match '/success_final', :to=>'pages#success_final'
 
 	match '/:custom_url', :to=>'pages#redirections',:via=>'get'
 

@@ -30,7 +30,11 @@ class PagesController < ApplicationController
 		end
 	end
   
-  def success
+  def success_final
+    @subscriber = Subscriber.find_by_email(CGI::unescape(params[:sub]))
   end
 
+  def success
+    @subscriber = Subscriber.find_by_email(CGI::unescape(params[:sub]))
+  end
 end
