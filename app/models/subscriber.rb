@@ -7,6 +7,7 @@ class Subscriber < ActiveRecord::Base
 end
 
 
+
 # == Schema Information
 #
 # Table name: subscribers
@@ -17,9 +18,11 @@ end
 #  created_at    :datetime
 #  updated_at    :datetime
 #  subscriber_id :integer(4)
+#  shoes         :boolean(1)
 #  watches       :boolean(1)
-#  ties          :boolean(1)
-#  dress_shirts  :boolean(1)
-#  shoes         :string(255)
+#  casual        :boolean(1)
+#  formal_ties   :boolean(1)
+#  denim         :boolean(1)
+#  sunglasses    :boolean(1)
 #
 

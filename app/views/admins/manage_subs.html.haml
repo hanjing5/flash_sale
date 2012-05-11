@@ -1,0 +1,62 @@
+%h2
+  You have 
+  = @subscribers.count 
+  subscribers.
+
+%h1
+  For copy and paste export
+
+%hr
+
+- @subscribers.each do |sub|
+  = "#{sub.email},"
+
+%br
+%br
+%br
+
+%h1
+  List
+
+%hr
+%table{:style=>'width:100%'}
+  %th
+    %b
+      %td
+        Email
+      %td
+        shoes
+      %td
+        watches
+      %td
+        casual
+      %td
+        formal_ties
+      %td
+        denim
+      %td
+        sunglasses
+      %td
+        Join date
+  - @subscribers.each do |sub|
+    %tr
+      %td
+        = sub.email
+      %td
+        = sub.shoes
+      %td
+        =sub.watches
+      %td
+        =sub.casual
+      %td
+        =sub.formal_ties
+      %td
+        =sub.denim
+      %td
+        =sub.sunglasses
+      %td
+        =sub.created_at
+
+
+
+
