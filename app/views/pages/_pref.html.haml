@@ -16,4 +16,5 @@
     = f.check_box :shoes
     shoes
   %br
-  = f.submit 'save', :class=>'btn btn-large btn-warning'
+  %button{:id=>'subscribe_button', :class=>"btn btn-warning btn-large", :style=>'opacity:1.0;height:2.1em;font-size:2em;vertical-align:top;', :onclick=>"$().button('loading')"}
+    save
