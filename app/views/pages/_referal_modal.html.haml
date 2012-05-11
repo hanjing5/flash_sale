@@ -7,7 +7,7 @@
     %a{:href=>'#', :onclick=>"selectAll('referal-link')"} Select
     %br
     #referal-link
-      = link_to "#{root_url}?refer=#{@subscriber.email}", "#{root_url}?refer=#{@subscriber.email}" 
+      = link_to "#{root_url}?referer=#{@subscriber.email}", "#{root_url}?referer=#{@subscriber.email}" 
     %br
     %table{:style=>'width:100%',:class=>'table'}
       %tr

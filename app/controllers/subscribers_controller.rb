@@ -4,9 +4,24 @@ class SubscribersController < ApplicationController
     @subscriber = ''
     @success = false
 
-    if not params[:subscriber][:referer].nil?
+    if not params[:subscriber][:referer].empty?
       puts 'Found a referer'
       r = Subscriber.find_by_email(params[:subscriber][:referer])
+      puts params[:subscriber][:referer]
+      puts params[:subscriber][:referer]
+      puts params[:subscriber][:referer]
+      puts params[:subscriber][:referer]
+      puts params[:subscriber][:referer].nil?
+      puts params
+      puts r
+      puts r
+      puts r
+      puts r
+      puts r
+      puts r
+      puts r
+      puts r
+      puts r
       if r
         @subscriber = r.subscribers.new(params[:subscriber])
         #params[:subscriber][:subscriber_id] = r.id
@@ -14,6 +29,8 @@ class SubscribersController < ApplicationController
       else 
         @subscriber = Subscriber.new(params[:subscriber])
       end
+    else 
+      @subscriber = Subscriber.new(params[:subscriber])
     end
 
     if @subscriber.save

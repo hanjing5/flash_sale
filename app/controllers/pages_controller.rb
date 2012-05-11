@@ -6,6 +6,15 @@ class PagesController < ApplicationController
 	def index
     if not params[:referer].nil?
       @referer = params[:referer]
+      puts 'found referer in index'
+      puts @referer
+      puts @referer
+      puts @referer
+      puts @referer
+      puts @referer
+      puts @referer
+      puts @referer
+      puts @referer
     end
 		@title = 'Home'
 	end
