@@ -1,26 +1,29 @@
-%h2 Check some categories for a more relevant experience
+%h2 
+  %font{:style=>'color:rgb(0,136,206)'}
+    Check some categories 
+  for a more relevant experience
 %br
 %br
 = form_for :subscriber, :url => sub_save_pref_path,:remote=>true  do |f|
   = f.hidden_field :email, :value=>@subscriber.email
-  %h2
+  %h2{:style=>'font-size:2em'}
     = f.check_box :shoes
     Shoes
-  %h2
+  %h2{:style=>'font-size:2em'}
     = f.check_box :watches
     Watches
-  %h2
+  %h2{:style=>'font-size:2em'}
     = f.check_box :casual
     Casual Wear
-  %h2
+  %h2{:style=>'font-size:2em'}
     = f.check_box :formal_ties
     Formal Wear / Ties
-  %h2
+  %h2{:style=>'font-size:2em'}
     = f.check_box :denim
     Denim
-  %h2
+  %h2{:style=>'font-size:2em'}
     = f.check_box :sunglasses
-    Summer wear / Sunglasses
+    Summer Wear / Sunglasses
   %br
   %button{:id=>'subscribe_button', :class=>"btn btn-warning btn-large", :style=>'opacity:1.0;height:2.1em;font-size:2em;vertical-align:top;', :onclick=>"$().button('loading')"}
     save
