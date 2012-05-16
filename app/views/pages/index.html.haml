@@ -2,10 +2,20 @@
 .row-responsive
   .span6
     .hero-unit
-      %h2 Step up your swag.
-      %h2 Bossary is a members-only access to great men's products and experiences to enhance your lifestyle.
+      %p{:style=>'font-size:2.5em;color:#544E4F;word-spacing:0px;line-height:33px'} 
+        Bossary grants you access to great 
+        %b{:style=>'color:#fff;font-weight:bold;'}
+          men's products 
+        that
+        %b{:style=>'color:#ea9a28;font-weight:bold'}
+          enhance your lifestyle
+        at up to
+        %br
+        %b{:style=>'color:#fff;font-weight:bold;'}
+          80% off.
       %br
       #response
+      Members-only
       = render 'sign_up_form'
     //  =form_for 'subscriber', :url=> sub_index_path, :method => 'post', :remote => true do |f|
     //    #response{:style=>'display:none;'}
